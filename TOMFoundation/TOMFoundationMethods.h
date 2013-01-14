@@ -26,5 +26,5 @@
 #import <Foundation/Foundation.h>
 
 #ifndef TOMLog
-export void TOMLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+FOUNDATION_EXPORT void TOMLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 #endif

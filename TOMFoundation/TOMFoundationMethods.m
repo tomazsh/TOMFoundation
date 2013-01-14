@@ -30,7 +30,7 @@ void TOMLog(NSString *format, ...) {
 #ifdef DEBUG
     va_list arguments;
     va_start(arguments, format);
-    NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:format, arguments] )
+    NSLog(@"%@", [[NSString alloc] initWithFormat:format arguments:arguments]);
     va_end(arguments);
 #endif
 }

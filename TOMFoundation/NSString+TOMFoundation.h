@@ -67,7 +67,7 @@
  
  @return A `NSString` object.
  */
-- (NSString *)stringByRemovingNewlineCharacters
+- (NSString *)stringByRemovingNewlineCharacters;
 
 /**
  Creates and returns a new string by removing all whitespace and newline characters from the receiver.
