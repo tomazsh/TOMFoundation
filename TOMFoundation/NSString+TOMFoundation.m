@@ -30,38 +30,38 @@
 #pragma mark -
 #pragma mark Instance Methods
 
-- (NSString *)stringByTrimmingWhitespaceCharacters
+- (NSString *)tom_stringByTrimmingWhitespaceCharacters
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
-- (NSString *)stringByTrimmingNewlineCharacters
+- (NSString *)tom_stringByTrimmingNewlineCharacters
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 
-- (NSString *)stringByTrimmingWhitespaceAndNewlineCharacters
+- (NSString *)tom_stringByTrimmingWhitespaceAndNewlineCharacters
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)stringByRemovingWhitespaceCharacters
+- (NSString *)tom_stringByRemovingWhitespaceCharacters
 {
-    return [self stringByRemovingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] joinedByString:@""];
+    return [self tom_stringByRemovingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] joinedByString:@""];
 }
 
-- (NSString *)stringByRemovingNewlineCharacters
+- (NSString *)tom_stringByRemovingNewlineCharacters
 {
-    return [self stringByRemovingCharactersInSet:[NSCharacterSet newlineCharacterSet] joinedByString:@""];
+    return [self tom_stringByRemovingCharactersInSet:[NSCharacterSet newlineCharacterSet] joinedByString:@""];
 }
 
-- (NSString *)stringByRemovingWhitespaceAndNewlineCharacters
+- (NSString *)tom_stringByRemovingWhitespaceAndNewlineCharacters
 {
-    return [self stringByRemovingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet] joinedByString:@""];
+    return [self tom_stringByRemovingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet] joinedByString:@""];
 }
 
 // Adopted from http://stackoverflow.com/questions/758212/how-can-i-strip-all-the-whitespaces-from-a-string-in-objective-c
-- (NSString *)stringByRemovingCharactersInSet:(NSCharacterSet *)characterSet joinedByString:(NSString *)joiningString
+- (NSString *)tom_stringByRemovingCharactersInSet:(NSCharacterSet *)characterSet joinedByString:(NSString *)joiningString
 {
     NSArray *parts = [self componentsSeparatedByCharactersInSet:characterSet];
     NSPredicate *noEmptyStrings = [NSPredicate predicateWithFormat:@"SELF != ''"];
@@ -69,7 +69,7 @@
     return [filteredParts componentsJoinedByString:joiningString];
 }
 
-- (BOOL)hasPrefixCharacterFromSet:(NSCharacterSet *)characterSet
+- (BOOL)tom_hasPrefixCharacterFromSet:(NSCharacterSet *)characterSet
 {
 	if (![self length]) {
 		return NO;
@@ -79,7 +79,7 @@
 	return [characterSet characterIsMember:firstChar];
 }
 
-- (BOOL)hasSuffixCharacterFromSet:(NSCharacterSet *)characterSet
+- (BOOL)tom_hasSuffixCharacterFromSet:(NSCharacterSet *)characterSet
 {
 	if (![self length]) {
 		return NO;
@@ -89,16 +89,16 @@
 	return [characterSet characterIsMember:lastChar];
 }
 
-- (NSString *)fileSystemSafeString
+- (NSString *)tom_fileSystemSafeString
 {
     static NSString *FileSystemSafeCharacters = @"-_.() abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:FileSystemSafeCharacters] invertedSet];
-    return [self stringByRemovingCharactersInSet:characterSet joinedByString:@"_"];
+    return [self tom_stringByRemovingCharactersInSet:characterSet joinedByString:@"_"];
 }
 
 #if (defined __COREFOUNDATION__) && (defined __UTCORETYPES__)
 
-- (NSString *)mimeTypeForLastPathComponent
+- (NSString *)tom_mimeTypeForLastPathComponent
 {
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[self pathExtension], NULL);
     CFStringRef mimeType = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType);

@@ -39,42 +39,42 @@
  
  @return A `NSString` object.
  */
-- (NSString *)stringByTrimmingWhitespaceCharacters;
+- (NSString *)tom_stringByTrimmingWhitespaceCharacters;
 
 /**
  Creates and returns a new string by trimming newline characters from the receiver.
  
  @return A `NSString` object.
  */
-- (NSString *)stringByTrimmingNewlineCharacters;
+- (NSString *)tom_stringByTrimmingNewlineCharacters;
 
 /**
  Creates and returns a new string by trimming whitespace and newline characters from the receiver.
  
  @return A `NSString` object.
  */
-- (NSString *)stringByTrimmingWhitespaceAndNewlineCharacters;
+- (NSString *)tom_stringByTrimmingWhitespaceAndNewlineCharacters;
 
 /**
  Creates and returns a new string by removing all whitespace characters from the receiver.
  
  @return A `NSString` object.
  */
-- (NSString *)stringByRemovingWhitespaceCharacters;
+- (NSString *)tom_stringByRemovingWhitespaceCharacters;
 
 /**
  Creates and returns a new string by removing all newline characters from the receiver.
  
  @return A `NSString` object.
  */
-- (NSString *)stringByRemovingNewlineCharacters;
+- (NSString *)tom_stringByRemovingNewlineCharacters;
 
 /**
  Creates and returns a new string by removing all whitespace and newline characters from the receiver.
 
  @return A `NSString` object.
 */
-- (NSString *)stringByRemovingWhitespaceAndNewlineCharacters;
+- (NSString *)tom_stringByRemovingWhitespaceAndNewlineCharacters;
 
 /**
  Creates and returns a new string by removing all whitespace and newline characters from the receiver.
@@ -84,7 +84,7 @@
  
  @return A `NSString` object.
  */
-- (NSString *)stringByRemovingCharactersInSet:(NSCharacterSet *)characterSet joinedByString:(NSString *)joiningString;
+- (NSString *)tom_stringByRemovingCharactersInSet:(NSCharacterSet *)characterSet joinedByString:(NSString *)joiningString;
 
 ///------------------------
 /// @name Comapring Strings
@@ -97,7 +97,7 @@
  
  @return `YES` if the first character is a member of `characterSet`, otherwise `NO`.
  */
-- (BOOL)hasPrefixCharacterFromSet:(NSCharacterSet *)characterSet;
+- (BOOL)tom_hasPrefixCharacterFromSet:(NSCharacterSet *)characterSet;
 
 /**
  Checks if the receiver's last character is a member of a character set.
@@ -106,7 +106,7 @@
  
  @return `YES` if the last character is a member of `characterSet`, otherwise `NO`.
  */
-- (BOOL)hasSuffixCharacterFromSet:(NSCharacterSet *)characterSet;
+- (BOOL)tom_hasSuffixCharacterFromSet:(NSCharacterSet *)characterSet;
 
 
 ///-------------------------
@@ -118,7 +118,7 @@
  
  @return A `NSString` object.
  */
-- (NSString *)fileSystemSafeString;
+- (NSString *)tom_fileSystemSafeString;
 
 #if (defined __COREFOUNDATION__) && (defined __UTCORETYPES__)
 
@@ -127,7 +127,7 @@
  
  @return A `NSString` object.
  */
-- (NSString *)mimeTypeForLastPathComponent;
+- (NSString *)tom_mimeTypeForLastPathComponent;
 
 #endif
 
