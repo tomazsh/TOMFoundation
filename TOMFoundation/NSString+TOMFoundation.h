@@ -84,10 +84,11 @@
  
  @return A `NSString` object.
  */
-- (NSString *)tom_stringByRemovingCharactersInSet:(NSCharacterSet *)characterSet joinedByString:(NSString *)joiningString;
+- (NSString *)tom_stringByRemovingCharactersInSet:(NSCharacterSet *)characterSet
+                                   joinedByString:(NSString *)joiningString;
 
 ///------------------------
-/// @name Comapring Strings
+/// @name Comparing Strings
 ///------------------------
 
 /**
